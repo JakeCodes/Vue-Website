@@ -1,12 +1,10 @@
 <template>
   <div id="footer">
     <v-footer dark padless>
-      <v-card class="flex" flat tile>
-        <v-card-title class="primary" id="footerCard">
+      <v-card class="flex" id="footerCard">
+        <v-card-title class="primary" id="footerTop">
           <strong>Let's Get Connected!</strong>
-
-          <v-spacer></v-spacer>
-
+          <v-spacer />
           <div v-for="icon in icons" :key="icon">
             <a :href="icon.link" target="_blank">
               <v-btn class="mx-4" dark icon>
@@ -17,6 +15,7 @@
         </v-card-title>
 
         <v-card-text
+          id="footerBottom"
           class="py-2 white--text text-center"
           style="height: 60px; justify-content: center; align-items: center; display: flex"
         >
@@ -45,7 +44,7 @@ export default {
 #footer {
   margin-top: 80px;
 }
-#footerCard {
+#footerTop {
   background-color: #b95b37 !important;
   height: 80px !important;
 }

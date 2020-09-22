@@ -34,12 +34,12 @@
       >
       </v-textarea>
 
-      <v-btn class="mr-4" type="submit">submit</v-btn>
+      <v-btn class="mr-4" id="submitBtn" type="submit">submit</v-btn>
     </form>
     <v-snackbar v-model="snackbar" :vertical="vertical">
       Success
       <template v-slot:action="{ attrs }">
-        <v-btn color="primary" text v-bind="attrs" @click="snackbar = false">
+        <v-btn text v-bind="attrs" @click="snackbar = false">
           Close
         </v-btn>
       </template>
@@ -130,6 +130,10 @@ export default {
 }
 #contactForm {
   width: 50% !important;
+}
+#submitBtn {
+  background-color: #b95b37 !important;
+  color: white !important;
 }
 @media (max-width: 1000px) {
   #contactForm {
