@@ -5,7 +5,7 @@
         <v-card-text>
           <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
             <a :href="icon.link" target="_blank">
-              <v-icon size="24px" id="icon">{{ icon.icon }}</v-icon>
+              <v-icon size="30px" id="icon">{{ icon.icon }}</v-icon>
             </a>
           </v-btn>
         </v-card-text>
