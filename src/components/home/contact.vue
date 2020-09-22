@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="contact"
-    style="height: 100vh; padding-top: 100px; justify-content: center; display: flex"
-  >
+  <div id="contact" style="height: 100vh; padding: 100px; justify-content: center; display: flex;">
     <form id="contactForm" v-on:submit="onSubmit">
       <h1>Contact</h1>
       <v-text-field
@@ -31,17 +28,14 @@
         @input="$v.msg.$touch()"
         @blur="$v.msg.$touch()"
         no-resize
-      >
-      </v-textarea>
+      ></v-textarea>
 
       <v-btn class="mr-4" id="submitBtn" type="submit">submit</v-btn>
     </form>
     <v-snackbar v-model="snackbar" :vertical="vertical">
       Success
       <template v-slot:action="{ attrs }">
-        <v-btn text v-bind="attrs" @click="snackbar = false">
-          Close
-        </v-btn>
+        <v-btn text v-bind="attrs" @click="snackbar = false">Close</v-btn>
       </template>
     </v-snackbar>
   </div>

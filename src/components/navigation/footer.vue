@@ -1,13 +1,13 @@
 <template>
   <div id="footer">
     <v-footer dark padless>
-      <v-card flat tile class="indigo lighten-1 white--text text-center" id="footerCard">
-        <v-card-text>
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
-            <a :href="icon.link" target="_blank">
-              <v-icon size="30px" id="icon">{{ icon.icon }}</v-icon>
-            </a>
-          </v-btn>
+      <v-card flat tile class="white--text text-center" id="footerCard">
+        <v-card-text id="footerTop">
+          <a v-for="icon in icons" :key="icon" :href="icon.link" target="_blank">
+            <v-btn class="mx-4 white--text" icon>
+              <v-icon size="40px" id="icon">{{ icon.icon }}</v-icon>
+            </v-btn>
+          </a>
         </v-card-text>
 
         <v-divider></v-divider>
@@ -35,12 +35,18 @@ export default {
 
 <style scoped>
 #footer {
+  z-index: -0;
   margin-top: 80px;
 }
-
 #footerCard {
   width: 100vw;
   background-color: #b95b37 !important;
+}
+#footerTop {
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 #footerBottom {
   background-color: #41474d !important;

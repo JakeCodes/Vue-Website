@@ -20,8 +20,10 @@ export default {
 #app {
   text-align: center;
 }
-
 h1 {
   text-transform: uppercase;
+}
+a {
+  text-decoration: none;
 }
 </style>
