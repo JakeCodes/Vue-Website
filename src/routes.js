@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "./components/home/index";
 
+import Home from "./components/home/index";
 import Python from "./components/projects/python";
 import Java from "./components/projects/java";
 import Javascript from "./components/projects/javascript";
