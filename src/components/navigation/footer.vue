@@ -34,7 +34,6 @@ export default {
     icons: [
       { icon: "mdi-discord", link: "https://discord.jakecodes.com" },
       { icon: "mdi-github", link: "https://github.jakecodes.com" },
-      { icon: "mdi-twitter", link: "https://twitter.com/codes_jake" },
     ],
   }),
 };
