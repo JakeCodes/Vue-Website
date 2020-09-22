@@ -15,5 +15,6 @@ export default new VueRouter({
     { path: "/projects/python", component: Python },
     { path: "/projects/java", component: Java },
     { path: "/projects/javascript", component: Javascript },
+    { path: "*", redirect: "/" },
   ],
 });
