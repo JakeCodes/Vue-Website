@@ -52,4 +52,9 @@ export default {
 #icon:hover {
   color: #41474d;
 }
+@media (max-width: 1000px) {
+  #footer {
+    margin-top: 90px;
+  }
+}
 </style>
