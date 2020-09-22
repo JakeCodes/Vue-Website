@@ -1,24 +1,18 @@
 <template>
   <div id="footer">
     <v-footer dark padless>
-      <v-card class="flex" id="footerCard">
-        <v-card-title class="primary" id="footerTop">
-          <strong>Let's Get Connected!</strong>
-          <v-spacer />
-          <div v-for="icon in icons" :key="icon">
+      <v-card flat tile class="indigo lighten-1 white--text text-center" id="footerCard">
+        <v-card-text>
+          <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
             <a :href="icon.link" target="_blank">
-              <v-btn class="mx-4" dark icon>
-                <v-icon size="35px" id="icon">{{ icon.icon }}</v-icon>
-              </v-btn>
+              <v-icon size="24px" id="icon">{{ icon.icon }}</v-icon>
             </a>
-          </div>
-        </v-card-title>
+          </v-btn>
+        </v-card-text>
 
-        <v-card-text
-          id="footerBottom"
-          class="py-2 white--text text-center"
-          style="height: 60px; justify-content: center; align-items: center; display: flex"
-        >
+        <v-divider></v-divider>
+
+        <v-card-text class="white--text" id="footerBottom">
           {{ new Date().getFullYear() }} —
           <strong>JakeCodes</strong>
         </v-card-text>
@@ -43,12 +37,19 @@ export default {
 #footer {
   margin-top: 80px;
 }
-#footerTop {
+
+#footerCard {
+  width: 100vw;
   background-color: #b95b37 !important;
-  height: 80px !important;
+}
+#footerBottom {
+  background-color: #41474d !important;
+}
+#icon {
+  color: white !important;
 }
 #icon:hover {
-  color: #41474d;
+  color: #41474d !important;
 }
 @media (max-width: 1000px) {
   #footer {
