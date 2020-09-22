@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <a href="#about" v-smooth-scroll>
-      <strong id="nav-title" class="nav-item">JakeCodes</strong>
+      <v-btn text id="nav-title" class="nav-item">JakeCodes</v-btn>
     </a>
     <a href="#portfolio" v-smooth-scroll>
       <v-btn text class="nav-item">Portfolio</v-btn>
@@ -38,6 +38,7 @@ export default {
 }
 .nav-item {
   color: white !important;
+  text-decoration: none;
   margin-right: 30px;
 }
 .nav-item:hover {
