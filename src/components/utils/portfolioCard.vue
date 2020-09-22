@@ -4,17 +4,18 @@
       <v-card-title style="color: black">{{ title }}</v-card-title>
     </v-img>
     <v-card-text class="text--primary">
-      <div id="description">
-        {{ description }}
-      </div>
+      <div id="description">{{ description }}</div>
     </v-card-text>
 
     <v-card-actions>
-      <router-link :to="link">
-        <v-btn text id="projectBtn">
-          See Projects
-        </v-btn>
-      </router-link>
+      <v-tooltip top>
+        <template v-slot:activator="{ on, attrs }">
+          <router-link :to="link">
+            <v-btn text id="projectBtn" v-bind="attrs" v-on="on">See Projects</v-btn>
+          </router-link>
+        </template>
+        <span>{{ title }} Projects</span>
+      </v-tooltip>
     </v-card-actions>
   </v-card>
 </template>
