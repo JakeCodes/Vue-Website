@@ -35,7 +35,7 @@ export default {
 }
 @media (max-width: 1000px) {
   #description {
-    width: 90%;
+    width: 100%;
     padding: 30px;
   }
 }

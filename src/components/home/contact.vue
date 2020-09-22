@@ -133,7 +133,7 @@ export default {
 }
 @media (max-width: 1000px) {
   #contactForm {
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 </style>

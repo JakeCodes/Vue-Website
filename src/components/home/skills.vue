@@ -78,7 +78,7 @@ export default {
 }
 @media (max-width: 1000px) {
   .skillsContainer {
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 </style>
