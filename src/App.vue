@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Footer from "./components/navigation/footer";
+import Footer from "./components/navigation/footer/footer";
 
 export default {
   name: "App",

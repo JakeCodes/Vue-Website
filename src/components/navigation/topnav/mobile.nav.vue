@@ -6,7 +6,7 @@
       <v-toolbar-title>JakeCodes</v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" fixed temporary>
+    <v-navigation-drawer v-model="drawer" fixed>
       <v-list shaped>
         <v-list-item-group>
           <a href="#about" v-smooth-scroll @click="drawer = false">
@@ -37,6 +37,7 @@
 
 <script>
 export default {
+  name: "mobileNav",
   data: () => ({
     drawer: false,
   }),
