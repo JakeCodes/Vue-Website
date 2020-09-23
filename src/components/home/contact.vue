@@ -4,12 +4,13 @@
     style="min-height: 100vh; padding: 100px; justify-content: center; display: flex;"
   >
     <form id="contactForm" v-on:submit="onSubmit">
-      <h1>Contact</h1>
+      <h1 style="margin-bottom: 50px">Contact</h1>
       <v-text-field
         v-model="name"
         :error-messages="nameErrors"
         :counter="20"
         label="Name"
+        solo
         required
         @input="$v.name.$touch()"
         @blur="$v.name.$touch()"
@@ -19,6 +20,7 @@
         :error-messages="emailErrors"
         label="E-mail"
         type="email"
+        solo
         required
         @input="$v.email.$touch()"
         @blur="$v.email.$touch()"
@@ -27,6 +29,7 @@
         v-model="msg"
         :error-messages="msgErrors"
         label="Message"
+        solo
         required
         @input="$v.msg.$touch()"
         @blur="$v.msg.$touch()"
