@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handleView() {
-      this.mobileNav = window.innerWidth <= 990;
+      this.mobileNav = window.innerWidth <= 1000;
     },
   },
 };
