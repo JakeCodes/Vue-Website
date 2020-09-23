@@ -4,7 +4,7 @@
     style="min-height: 100vh; padding: 100px; justify-content: center; display: flex;"
   >
     <form id="contactForm" v-on:submit="onSubmit">
-      <h1 style="margin-bottom: 50px">Contact</h1>
+      <h1 style="margin-bottom: 50px">Contact Me</h1>
       <v-text-field
         v-model="name"
         :error-messages="nameErrors"
@@ -36,9 +36,7 @@
         no-resize
       ></v-textarea>
 
-      <v-btn :loading="loading" class="mr-4" id="submitBtn" @click="onSubmit"
-        >submit</v-btn
-      >
+      <v-btn :loading="loading" class="mr-4" id="submitBtn" @click="onSubmit">submit</v-btn>
     </form>
     <v-snackbar v-model="snackbar" :vertical="vertical">
       <span v-if="status === 'INVALID'">Invalid Form</span>

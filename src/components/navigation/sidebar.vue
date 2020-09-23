@@ -26,7 +26,7 @@
           </a>
           <a href="#contact" v-smooth-scroll @click="drawer = false">
             <v-list-item>
-              <v-list-item-title>Contact</v-list-item-title>
+              <v-list-item-title>Contact Me</v-list-item-title>
             </v-list-item>
           </a>
         </v-list-item-group>

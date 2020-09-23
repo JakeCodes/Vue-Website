@@ -10,7 +10,7 @@
       <v-btn text class="nav-item">Skills</v-btn>
     </a>
     <a href="#contact" v-smooth-scroll>
-      <v-btn text class="nav-item">Contact</v-btn>
+      <v-btn text class="nav-item">Contact Me</v-btn>
     </a>
   </div>
 </template>
