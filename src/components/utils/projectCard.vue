@@ -10,11 +10,16 @@
     </v-card-text>
 
     <v-card-actions>
-      <a :href="github" target="_blank">
-        <v-btn text id="projectBtn" icon>
-          <v-icon>mdi-github</v-icon>
-        </v-btn>
-      </a>
+      <v-tooltip top>
+        <template v-slot:activator="{ on, attrs }">
+          <a :href="github" target="_blank">
+            <v-btn text id="projectBtn" icon v-bind="attrs" v-on="on">
+              <v-icon>mdi-github</v-icon>
+            </v-btn>
+          </a>
+        </template>
+        <span>Github</span>
+      </v-tooltip>
     </v-card-actions>
   </v-card>
 </template>

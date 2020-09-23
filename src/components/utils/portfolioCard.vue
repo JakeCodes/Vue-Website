@@ -8,14 +8,11 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-tooltip top>
-        <template v-slot:activator="{ on, attrs }">
-          <router-link :to="link">
-            <v-btn text id="projectBtn" v-bind="attrs" v-on="on">See Projects</v-btn>
-          </router-link>
-        </template>
-        <span>{{ title }} Projects</span>
-      </v-tooltip>
+      <router-link :to="link">
+        <v-btn text id="projectBtn" v-bind="attrs" v-on="on"
+          >See Projects</v-btn
+        >
+      </router-link>
     </v-card-actions>
   </v-card>
 </template>

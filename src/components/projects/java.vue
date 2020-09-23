@@ -1,10 +1,22 @@
 <template>
   <div id="Java" style="min-height: 100vh; padding-top: 80px">
-    <v-btn icon style="position: absolute; top: 20px; left: 20px">
-      <router-link to="/">
-        <v-icon size="40px" id="icon" style="color: #B95B37">mdi-close</v-icon>
-      </router-link>
-    </v-btn>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          icon
+          style="position: absolute; top: 20px; left: 20px"
+          v-bind="attrs"
+          v-on="on"
+        >
+          <router-link to="/">
+            <v-icon size="40px" id="icon" style="color: #B95B37"
+              >mdi-close</v-icon
+            >
+          </router-link>
+        </v-btn>
+      </template>
+      <span>Close</span>
+    </v-tooltip>
     <h1>Java Projects</h1>
     <ProjectCard
       github="#"
