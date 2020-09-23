@@ -20,6 +20,11 @@ export default {
 #app {
   text-align: center;
 }
+.center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 h1 {
   text-transform: uppercase;
 }

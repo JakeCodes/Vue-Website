@@ -1,5 +1,8 @@
 <template>
-  <div id="contact" style="height: 100vh; padding: 100px; justify-content: center; display: flex;">
+  <div
+    id="contact"
+    style="min-height: 100vh; padding: 100px; justify-content: center; display: flex;"
+  >
     <form id="contactForm" v-on:submit="onSubmit">
       <h1>Contact</h1>
       <v-text-field

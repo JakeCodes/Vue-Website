@@ -2,8 +2,13 @@
   <div id="footer">
     <v-footer dark padless>
       <v-card flat tile class="white--text text-center" id="footerCard">
-        <v-card-text id="footerTop">
-          <a v-for="icon in icons" :key="icon" :href="icon.link" target="_blank">
+        <v-card-text id="footerTop" class="center">
+          <a
+            v-for="icon in icons"
+            :key="icon"
+            :href="icon.link"
+            target="_blank"
+          >
             <v-btn class="mx-4 white--text" icon>
               <v-icon size="40px" id="icon">{{ icon.icon }}</v-icon>
             </v-btn>
@@ -26,8 +31,22 @@ export default {
   name: "footer",
   data: () => ({
     icons: [
-      { icon: "mdi-discord", link: "https://discord.jakecodes.com" },
-      { icon: "mdi-github", link: "https://github.jakecodes.com" },
+      {
+        icon: "mdi-discord",
+        link: "https://discord.jakecodes.com",
+      },
+      {
+        icon: "mdi-github",
+        link: "https://github.jakecodes.com",
+      },
+      {
+        icon: "mdi-stack-overflow",
+        link: "https://stackoverflow.jakecodes.com",
+      },
+      {
+        icon: "mdi-youtube",
+        link: "https://youtube.jakecodes.com",
+      },
     ],
   }),
 };
@@ -35,7 +54,6 @@ export default {
 
 <style scoped>
 #footer {
-  z-index: -0;
   margin-top: 80px;
 }
 #footerCard {
@@ -44,9 +62,6 @@ export default {
 }
 #footerTop {
   height: 130px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 #footerBottom {
   background-color: #41474d !important;

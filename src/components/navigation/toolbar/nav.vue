@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="center">
     <a href="#about" v-smooth-scroll>
       <v-btn text id="nav-title" class="nav-item">JakeCodes</v-btn>
     </a>
@@ -27,9 +27,6 @@ export default {
   width: 100vw;
   background-color: #b95b37;
   height: 70px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   z-index: 1000;
 }
 #nav-title {

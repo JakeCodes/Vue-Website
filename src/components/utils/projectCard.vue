@@ -1,9 +1,9 @@
 <template>
   <v-card class="mx-auto" max-width="600" id="card">
     <v-img class="white--text align-end" height="200px" :src="img">
-      <v-card-title style="color: black">{{ title }}</v-card-title>
+      <v-card-title :style="{ color: titleColor }">{{ title }} </v-card-title>
     </v-img>
-    <v-card-text class="text--primary">
+    <v-card-text>
       <div id="description">
         {{ description }}
       </div>
@@ -22,7 +22,13 @@
 <script>
 export default {
   name: "portfolioCard",
-  props: { description: String, github: String, title: String, img: String },
+  props: {
+    description: String,
+    github: String,
+    title: String,
+    img: String,
+    titleColor: String,
+  },
 };
 </script>
 

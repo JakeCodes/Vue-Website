@@ -1,12 +1,34 @@
 <template>
   <div id="python" style="min-height: 100vh; padding-top: 80px">
+    <v-btn icon style="position: absolute; top: 20px; left: 20px">
+      <router-link to="/">
+        <v-icon size="40px" id="icon" style="color: #B95B37">mdi-close</v-icon>
+      </router-link>
+    </v-btn>
     <h1>Python Projects</h1>
+    <ProjectCard
+      github="#"
+      title="Project 1"
+      titleColor="white"
+      img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNA6jrEJHnCQdVbQEqMXAIlrK5aecODS4IwQ&usqp=CAU"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nihil ipsa ullam labore deleniti obcaecati illum quia dolore minus unde. Dolorum itaque molestiae saepe sequi quibusdam consectetur aspernatur. Delectus, iste?"
+    />
+    <ProjectCard
+      github="#"
+      title="Project 2"
+      titleColor="white"
+      img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNA6jrEJHnCQdVbQEqMXAIlrK5aecODS4IwQ&usqp=CAU"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nihil ipsa ullam labore deleniti obcaecati illum quia dolore minus unde. Dolorum itaque molestiae saepe sequi quibusdam consectetur aspernatur. Delectus, iste?"
+    />
   </div>
 </template>
 
 <script>
+import ProjectCard from "../utils/projectCard";
+
 export default {
   name: "python",
+  components: { ProjectCard },
   beforeMount() {
     window.scrollTo(0, 0);
   },
