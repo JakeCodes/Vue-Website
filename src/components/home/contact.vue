@@ -36,18 +36,16 @@
         no-resize
       ></v-textarea>
 
-      <v-btn class="mr-4" id="submitBtn" @click="onSubmit">submit</v-btn>
+      <v-btn :loading="loading" class="mr-4" id="submitBtn" @click="onSubmit"
+        >submit</v-btn
+      >
     </form>
     <v-snackbar v-model="snackbar" :vertical="vertical">
-      Success
+      <span v-if="status === 'INVALID'">Invalid Form</span>
+      <span v-if="status === 'SUCCESS'">Success</span>
+      <span v-if="status === 'EMAIL'">Error Sending Email</span>
       <template v-slot:action="{ attrs }">
         <v-btn text v-bind="attrs" @click="snackbar = false">Close</v-btn>
-      </template>
-    </v-snackbar>
-    <v-snackbar v-model="errorSnackbar" :vertical="vertical">
-      Invalid Form
-      <template v-slot:action="{ attrs }">
-        <v-btn text v-bind="attrs" @click="errorSnackbar = false">Close</v-btn>
       </template>
     </v-snackbar>
   </div>
@@ -77,8 +75,9 @@ export default {
     name: "",
     email: "",
     msg: "",
+    status: "",
+    loading: false,
     snackbar: false,
-    errorSnackbar: false,
   }),
 
   computed: {
@@ -110,7 +109,14 @@ export default {
   methods: {
     async onSubmit(e) {
       e.preventDefault();
-      if (this.$v.$invalid) return (this.errorSnackbar = true);
+      this.loading = true;
+      if (this.$v.$invalid) {
+        return (
+          (this.status = "INVALID"),
+          (this.snackbar = true),
+          (this.loading = false)
+        );
+      }
       const url = `https://jakecodes-backend.herokuapp.com/?name=${this.name}&email=${this.email}&message=${this.msg}`
         .trim()
         .replace(" ", "+");
@@ -118,8 +124,15 @@ export default {
       await axios.get(url).catch((error) => {
         this.errorMessage = error.message;
         console.error("There was an error!", error);
+        return (
+          (this.status = "EMAIL"),
+          (this.snackbar = true),
+          (this.loading = false)
+        );
       });
       await this.clear();
+      this.status = "SUCCESS";
+      this.loading = false;
       this.snackbar = true;
     },
     clear() {
