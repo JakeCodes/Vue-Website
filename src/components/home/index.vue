@@ -15,7 +15,7 @@ import About from "./about";
 import Portfolio from "./portfolio";
 import Skills from "./skills";
 import Contact from "./contact";
-import Nav from "../navigation/toolbar/nav";
+import Nav from "../navigation/nav";
 
 export default {
   name: "about",
