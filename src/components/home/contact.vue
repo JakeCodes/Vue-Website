@@ -36,12 +36,18 @@
         no-resize
       ></v-textarea>
 
-      <v-btn class="mr-4" id="submitBtn" type="submit">submit</v-btn>
+      <v-btn class="mr-4" id="submitBtn" @click="onSubmit">submit</v-btn>
     </form>
     <v-snackbar v-model="snackbar" :vertical="vertical">
       Success
       <template v-slot:action="{ attrs }">
         <v-btn text v-bind="attrs" @click="snackbar = false">Close</v-btn>
+      </template>
+    </v-snackbar>
+    <v-snackbar v-model="errorSnackbar" :vertical="vertical">
+      Invalid Form
+      <template v-slot:action="{ attrs }">
+        <v-btn text v-bind="attrs" @click="errorSnackbar = false">Close</v-btn>
       </template>
     </v-snackbar>
   </div>
@@ -72,6 +78,7 @@ export default {
     email: "",
     msg: "",
     snackbar: false,
+    errorSnackbar: false,
   }),
 
   computed: {
@@ -103,6 +110,7 @@ export default {
   methods: {
     async onSubmit(e) {
       e.preventDefault();
+      if (this.$v.$invalid) return (this.errorSnackbar = true);
       const url = `https://jakecodes-backend.herokuapp.com/?name=${this.name}&email=${this.email}&message=${this.msg}`
         .trim()
         .replace(" ", "+");
@@ -126,10 +134,10 @@ export default {
 
 <style scoped>
 .card {
-  width: 100% !important;
+  width: 100vw !important;
 }
 #contactForm {
-  width: 50% !important;
+  width: 60% !important;
 }
 #submitBtn {
   background-color: #b95b37 !important;
@@ -137,7 +145,7 @@ export default {
 }
 @media (max-width: 1000px) {
   #contactForm {
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 </style>
