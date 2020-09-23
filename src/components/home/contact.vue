@@ -146,11 +146,11 @@ export default {
 </script>
 
 <style scoped>
-.card {
+#contact {
   width: 100vw !important;
 }
 #contactForm {
-  width: 60% !important;
+  width: 50vw !important;
 }
 #submitBtn {
   background-color: #b95b37 !important;
@@ -158,7 +158,7 @@ export default {
 }
 @media (max-width: 1000px) {
   #contactForm {
-    width: 100% !important;
+    width: 100vw !important;
   }
 }
 </style>

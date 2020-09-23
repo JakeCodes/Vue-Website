@@ -1,6 +1,7 @@
 <template>
   <div class="all">
-    <Nav />
+    <Nav v-if="!mobileNav" />
+    <Sidebar v-if="mobileNav" />
     <div class="page">
       <About />
       <Portfolio />
@@ -16,12 +17,28 @@ import Portfolio from "./portfolio";
 import Skills from "./skills";
 import Contact from "./contact";
 import Nav from "../navigation/nav";
+import Sidebar from "../navigation/sidebar";
 
 export default {
   name: "about",
-  components: { About, Portfolio, Skills, Contact, Nav },
-  beforeMount() {
+  components: { About, Portfolio, Skills, Contact, Nav, Sidebar },
+  data() {
+    return {
+      mobileNav: false,
+    };
+  },
+  created() {
     window.scrollTo(0, 0);
+    window.addEventListener("resize", this.handleView);
+    this.handleView();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.handleView);
+  },
+  methods: {
+    handleView() {
+      this.mobileNav = window.innerWidth <= 990;
+    },
   },
 };
 </script>
