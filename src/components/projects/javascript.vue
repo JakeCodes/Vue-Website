@@ -2,16 +2,9 @@
   <div id="python" style="min-height: 100vh; padding-top: 80px">
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          icon
-          style="position: absolute; top: 20px; left: 20px"
-          v-bind="attrs"
-          v-on="on"
-        >
+        <v-btn icon style="position: absolute; top: 20px; left: 20px" v-bind="attrs" v-on="on">
           <router-link to="/">
-            <v-icon size="40px" id="icon" style="color: #B95B37"
-              >mdi-close</v-icon
-            >
+            <v-icon size="40px" id="icon" style="color: #B95B37">mdi-close</v-icon>
           </router-link>
         </v-btn>
       </template>

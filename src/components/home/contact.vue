@@ -110,26 +110,22 @@ export default {
     async onSubmit(e) {
       e.preventDefault();
       this.loading = true;
-      if (this.$v.$invalid) {
-        return (
-          (this.status = "INVALID"),
-          (this.snackbar = true),
-          (this.loading = false)
-        );
-      }
       const url = `https://jakecodes-backend.herokuapp.com/?name=${this.name}&email=${this.email}&message=${this.msg}`
         .trim()
         .replace(" ", "+");
 
-      await axios.get(url).catch((error) => {
-        this.errorMessage = error.message;
-        console.error("There was an error!", error);
-        return (
-          (this.status = "EMAIL"),
-          (this.snackbar = true),
-          (this.loading = false)
-        );
-      });
+      await axios
+        .get(url)
+        .then((res) => res.data)
+        .catch((error) => {
+          this.errorMessage = error.message;
+          console.error("There was an error!", error);
+          return (
+            (this.status = "EMAIL"),
+            (this.snackbar = true),
+            (this.loading = false)
+          );
+        });
       await this.clear();
       this.status = "SUCCESS";
       this.loading = false;

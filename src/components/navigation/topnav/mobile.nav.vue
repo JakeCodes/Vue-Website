@@ -11,7 +11,7 @@
         <v-list-item-group>
           <a href="#about" v-smooth-scroll @click="drawer = false">
             <v-list-item>
-              <v-list-item-title>JakeCodes</v-list-item-title>
+              <v-list-item-title>About</v-list-item-title>
             </v-list-item>
           </a>
           <a href="#portfolio" v-smooth-scroll @click="drawer = false">
