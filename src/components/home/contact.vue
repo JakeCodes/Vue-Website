@@ -66,7 +66,7 @@ export default {
   validations: {
     name: { required, maxLength: maxLength(20) },
     email: { required, email },
-    msg: { required, minLength: minLength(20) },
+    msg: { required, minLength: minLength(20), maxLength: maxLength(1200) },
   },
 
   data: () => ({
@@ -99,6 +99,8 @@ export default {
       if (!this.$v.msg.$dirty) return errors;
       !this.$v.msg.minLength &&
         errors.push("Message must be at least 20 characters long");
+      !this.$v.msg.maxLength &&
+        errors.push("Message must be at most 1200 characters long");
       !this.$v.msg.required && errors.push("Msg is required.");
       return errors;
     },
