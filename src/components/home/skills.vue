@@ -2,30 +2,22 @@
   <div id="skills" style="min-height: 100vh; padding-top: 100px">
     <h1>Skills</h1>
 
-    <p id="par">
-      Python
-    </p>
+    <p id="par">Python</p>
     <div class="skillsContainer">
       <div class="skills py">90%</div>
     </div>
 
-    <p id="par">
-      Typescript
-    </p>
+    <p id="par">Typescript/Javascript</p>
     <div class="skillsContainer">
       <div class="skills ts">80%</div>
     </div>
 
-    <p id="par">
-      Java
-    </p>
+    <p id="par">Java</p>
     <div class="skillsContainer">
       <div class="skills java">75%</div>
     </div>
 
-    <p id="par">
-      C#
-    </p>
+    <p id="par">C#</p>
     <div class="skillsContainer">
       <div class="skills cs">60%</div>
     </div>
