@@ -1,5 +1,9 @@
 <template>
-  <div class="responsiveNav" data-aos="fade">
+  <div
+    class="responsiveNav"
+    data-aos="fade"
+    style="position: fixed; z-index: 1000"
+  >
     <MobileNav v-if="mobileNav" />
     <DesktopNav v-else />
   </div>
