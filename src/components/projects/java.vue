@@ -21,12 +21,14 @@
     <ProjectCard
       github="#"
       title="Project 1"
+      animation="fade-left"
       titleColor="white"
       img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNA6jrEJHnCQdVbQEqMXAIlrK5aecODS4IwQ&usqp=CAU"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nihil ipsa ullam labore deleniti obcaecati illum quia dolore minus unde. Dolorum itaque molestiae saepe sequi quibusdam consectetur aspernatur. Delectus, iste?"
     />
     <ProjectCard
       github="#"
+      animation="fade-right"
       title="Project 2"
       titleColor="white"
       img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNA6jrEJHnCQdVbQEqMXAIlrK5aecODS4IwQ&usqp=CAU"

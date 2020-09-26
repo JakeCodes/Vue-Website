@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="600" id="card">
+  <v-card class="mx-auto" max-width="600" id="card" :data-aos="animation">
     <v-img class="white--text align-end" height="200px" :src="img">
       <v-card-title :style="{ color: titleColor }">{{ title }}</v-card-title>
     </v-img>
@@ -31,6 +31,7 @@ export default {
     title: String,
     img: String,
     titleColor: String,
+    animation: String,
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="responsiveNav">
-    <DesktopNav v-if="!mobileNav" />
     <MobileNav v-if="mobileNav" />
+    <DesktopNav v-else />
   </div>
 </template>
 

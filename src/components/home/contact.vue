@@ -10,36 +10,42 @@
   >
     <form id="contactForm" v-on:submit="onSubmit">
       <h1 style="margin-bottom: 50px">Contact Me</h1>
-      <v-text-field
-        v-model="name"
-        :error-messages="nameErrors"
-        :counter="20"
-        label="Name"
-        solo
-        required
-        @input="$v.name.$touch()"
-        @blur="$v.name.$touch()"
-      ></v-text-field>
-      <v-text-field
-        v-model="email"
-        :error-messages="emailErrors"
-        label="E-mail"
-        type="email"
-        solo
-        required
-        @input="$v.email.$touch()"
-        @blur="$v.email.$touch()"
-      ></v-text-field>
-      <v-textarea
-        v-model="msg"
-        :error-messages="msgErrors"
-        label="Message"
-        solo
-        required
-        @input="$v.msg.$touch()"
-        @blur="$v.msg.$touch()"
-        no-resize
-      ></v-textarea>
+      <div data-aos="fade-left">
+        <v-text-field
+          v-model="name"
+          :error-messages="nameErrors"
+          :counter="20"
+          label="Name"
+          solo
+          required
+          @input="$v.name.$touch()"
+          @blur="$v.name.$touch()"
+        ></v-text-field>
+      </div>
+      <div data-aos="fade-right">
+        <v-text-field
+          v-model="email"
+          :error-messages="emailErrors"
+          label="E-mail"
+          type="email"
+          solo
+          required
+          @input="$v.email.$touch()"
+          @blur="$v.email.$touch()"
+        ></v-text-field>
+      </div>
+      <div data-aos="fade-left">
+        <v-textarea
+          v-model="msg"
+          :error-messages="msgErrors"
+          label="Message"
+          solo
+          required
+          @input="$v.msg.$touch()"
+          @blur="$v.msg.$touch()"
+          no-resize
+        ></v-textarea>
+      </div>
 
       <v-btn :loading="loading" class="mr-4" id="submitBtn" @click="onSubmit"
         >submit</v-btn
