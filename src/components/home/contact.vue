@@ -129,7 +129,10 @@ export default {
           (this.snackbar = true),
           (this.loading = false)
         );
-      const url = `https://jakecodes-backend.herokuapp.com/?name=${this.name}&email=${this.email}&message=${this.msg}`
+      const url = `https://jakecodes-backend.herokuapp.com/
+      ?name=${this.name.replace("&", "and")}
+      &email=${this.email.replace("&", "and")}
+      &message=${this.msg.replace("&", "and")}`
         .trim()
         .replace(" ", "+");
 
