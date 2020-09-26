@@ -11,6 +11,7 @@ const dur = 400;
 
 Vue.use(VueSmoothScroll, {
   duration: dur,
+  updateHistory: false,
 });
 
 Vue.config.productionTip = false;
