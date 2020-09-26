@@ -17,7 +17,6 @@
           :counter="20"
           label="Name"
           solo
-          required
           @input="$v.name.$touch()"
           @blur="$v.name.$touch()"
         ></v-text-field>
@@ -29,7 +28,6 @@
           label="E-mail"
           type="email"
           solo
-          required
           @input="$v.email.$touch()"
           @blur="$v.email.$touch()"
         ></v-text-field>
@@ -40,10 +38,8 @@
           :error-messages="msgErrors"
           label="Message"
           solo
-          required
           @input="$v.msg.$touch()"
           @blur="$v.msg.$touch()"
-          no-resize
         ></v-textarea>
       </div>
 
