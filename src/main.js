@@ -7,10 +7,8 @@ import VueSmoothScroll from "vue2-smooth-scroll";
 import aos from "aos";
 import "aos/dist/aos.css";
 
-const dur = 400;
-
 Vue.use(VueSmoothScroll, {
-  duration: dur,
+  duration: 400,
   updateHistory: false,
 });
 
