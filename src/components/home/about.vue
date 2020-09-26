@@ -1,14 +1,13 @@
 <template>
-  <div id="about" style="min-height: 100vh; padding-top: 80px">
+  <div id="about" style="min-height: 100vh; padding-top: 80px" data-aos="fade">
     <h1>Hi I'm Jake</h1>
     <div id="description">
       <img
-        data-aos="zoom-in"
         src="../../assets/imgs/JakeLogo.png"
         alt="jakecodes_img"
         style="width: 200px; height; 200px; padding: 0"
       />
-      <p data-aos="zoom-in">
+      <p>
         I love to Program and learn about new Technologies! I started when I was
         13 and have continued ever since. I love to code because you can do
         anything your mind tells you too.
