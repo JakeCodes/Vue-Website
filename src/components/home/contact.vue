@@ -130,11 +130,12 @@ export default {
           (this.loading = false)
         );
       const url = `https://jakecodes-backend.herokuapp.com/
-      ?name=${this.name.replace("&", "and")}
-      &email=${this.email.replace("&", "and")}
-      &message=${this.msg.replace("&", "and")}`
+      ?name=${this.name.split("&").join("and")}
+      &email=${this.email.split("&").join("and")}
+      &message=${this.msg.split("&").join("and")}`
         .trim()
-        .replace(" ", "+");
+        .split(" ")
+        .join("+");
 
       await axios
         .get(url)
