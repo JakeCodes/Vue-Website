@@ -1,12 +1,10 @@
 <template>
-  <div id="faq" style="min-height: 100vh; padding: 100px" data-aos="fade-left">
+  <div id="faq" style="min-height: auto; padding: 100px" data-aos="fade-left">
     <h1>FAQ</h1>
     <v-expansion-panels id="expansion-panels" accordion="true">
       <v-expansion-panel>
         <v-expansion-panel-header>When I got started?</v-expansion-panel-header>
-        <v-expansion-panel-content>
-          December, 2019
-        </v-expansion-panel-content>
+        <v-expansion-panel-content> December, 2019 </v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
         <v-expansion-panel-header>How I got started?</v-expansion-panel-header>

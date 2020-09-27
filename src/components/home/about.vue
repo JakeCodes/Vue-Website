@@ -1,5 +1,5 @@
 <template functional>
-  <div id="about" style="min-height: 100vh; padding-top: 80px" data-aos="fade">
+  <div id="about" style="min-height: auto; padding-top: 80px" data-aos="fade">
     <h1>Hi I'm Jake</h1>
     <div id="description">
       <img

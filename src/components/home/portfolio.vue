@@ -1,5 +1,5 @@
 <template>
-  <div id="portfolio" style="min-height: 100vh; padding-top: 100px">
+  <div id="portfolio" style="min-height: auto; padding-top: 100px">
     <h1>Portfolio</h1>
 
     <PortfolioCard

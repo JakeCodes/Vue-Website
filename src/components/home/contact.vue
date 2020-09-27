@@ -2,11 +2,11 @@
   <div
     id="contact"
     style="
-        min-height: 100vh;
-        padding: 100px;
-        justify-content: center;
-        display: flex;
-      "
+      min-height: auto;
+      padding: 100px;
+      justify-content: center;
+      display: flex;
+    "
   >
     <form id="contactForm" v-on:submit="onSubmit">
       <h1 style="margin-bottom: 50px">Contact Me</h1>
