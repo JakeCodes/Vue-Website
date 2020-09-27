@@ -1,63 +1,61 @@
 <template>
-  <v-lazy min-height="200">
-    <div
-      id="contact"
-      style="
+  <div
+    id="contact"
+    style="
         min-height: 100vh;
         padding: 100px;
         justify-content: center;
         display: flex;
       "
-    >
-      <form id="contactForm" v-on:submit="onSubmit">
-        <h1 style="margin-bottom: 50px">Contact Me</h1>
-        <div data-aos="fade-left">
-          <v-text-field
-            v-model="name"
-            :error-messages="nameErrors"
-            :counter="20"
-            label="Name"
-            solo
-            @input="$v.name.$touch()"
-            @blur="$v.name.$touch()"
-          ></v-text-field>
-        </div>
-        <div data-aos="fade-right">
-          <v-text-field
-            v-model="email"
-            :error-messages="emailErrors"
-            label="E-mail"
-            type="email"
-            solo
-            @input="$v.email.$touch()"
-            @blur="$v.email.$touch()"
-          ></v-text-field>
-        </div>
-        <div data-aos="fade-left">
-          <v-textarea
-            v-model="msg"
-            :error-messages="msgErrors"
-            label="Message"
-            solo
-            @input="$v.msg.$touch()"
-            @blur="$v.msg.$touch()"
-          ></v-textarea>
-        </div>
+  >
+    <form id="contactForm" v-on:submit="onSubmit">
+      <h1 style="margin-bottom: 50px">Contact Me</h1>
+      <div data-aos="fade-left">
+        <v-text-field
+          v-model="name"
+          :error-messages="nameErrors"
+          :counter="20"
+          label="Name"
+          solo
+          @input="$v.name.$touch()"
+          @blur="$v.name.$touch()"
+        ></v-text-field>
+      </div>
+      <div data-aos="fade-right">
+        <v-text-field
+          v-model="email"
+          :error-messages="emailErrors"
+          label="E-mail"
+          type="email"
+          solo
+          @input="$v.email.$touch()"
+          @blur="$v.email.$touch()"
+        ></v-text-field>
+      </div>
+      <div data-aos="fade-left">
+        <v-textarea
+          v-model="msg"
+          :error-messages="msgErrors"
+          label="Message"
+          solo
+          @input="$v.msg.$touch()"
+          @blur="$v.msg.$touch()"
+        ></v-textarea>
+      </div>
 
-        <v-btn :loading="loading" class="mr-4" id="submitBtn" @click="onSubmit"
-          >submit</v-btn
-        >
-      </form>
-      <v-snackbar :color="snackColor" v-model="snackbar">
-        <span v-if="status === 'INVALID'">Invalid Form</span>
-        <span v-if="status === 'SUCCESS'">Success</span>
-        <span v-if="status === 'EMAIL'">Error Sending Email</span>
-        <template v-slot:action="{ attrs }">
-          <v-btn text v-bind="attrs" @click="snackbar = false">Close</v-btn>
-        </template>
-      </v-snackbar>
-    </div>
-  </v-lazy>
+      <v-btn :loading="loading" class="mr-4" id="submitBtn" @click="onSubmit"
+        >submit</v-btn
+      >
+    </form>
+    <v-snackbar :color="snackColor" v-model="snackbar">
+      <span v-if="status === 'INVALID'">Invalid Form</span>
+      <span v-if="status === 'SUCCESS'">Success</span>
+      <span v-if="status === 'EMAIL'">Error Sending Email</span>
+      <template v-slot:action="{ attrs }">
+        <v-btn text v-bind="attrs" @click="snackbar = false">Close</v-btn>
+      </template>
+    </v-snackbar>
+  </div>
 </template>
 
 <script>

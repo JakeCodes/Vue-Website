@@ -1,29 +1,27 @@
 <template functional>
-  <v-lazy min-height="200">
-    <div id="skills" style="min-height: 100vh; padding-top: 100px">
-      <h1>Skills</h1>
+  <div id="skills" style="min-height: 100vh; padding-top: 100px">
+    <h1>Skills</h1>
 
-      <p id="par">Python</p>
-      <div class="skillsContainer" data-aos="zoom-in">
-        <div class="skills py">90%</div>
-      </div>
-
-      <p id="par">Typescript/Javascript</p>
-      <div class="skillsContainer" data-aos="zoom-in">
-        <div class="skills ts">80%</div>
-      </div>
-
-      <p id="par">Java</p>
-      <div class="skillsContainer" data-aos="zoom-in">
-        <div class="skills java">75%</div>
-      </div>
-
-      <p id="par">C#</p>
-      <div class="skillsContainer" data-aos="zoom-in">
-        <div class="skills cs">60%</div>
-      </div>
+    <p id="par">Python</p>
+    <div class="skillsContainer" data-aos="zoom-in">
+      <div class="skills py">90%</div>
     </div>
-  </v-lazy>
+
+    <p id="par">Typescript/Javascript</p>
+    <div class="skillsContainer" data-aos="zoom-in">
+      <div class="skills ts">80%</div>
+    </div>
+
+    <p id="par">Java</p>
+    <div class="skillsContainer" data-aos="zoom-in">
+      <div class="skills java">75%</div>
+    </div>
+
+    <p id="par">C#</p>
+    <div class="skillsContainer" data-aos="zoom-in">
+      <div class="skills cs">60%</div>
+    </div>
+  </div>
 </template>
 
 <script>
