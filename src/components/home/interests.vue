@@ -6,17 +6,39 @@
   >
     <h1>Interests</h1>
     <p>Other than programming I enjoy the following</p>
-    <v-card id="interestsCard">
-      <v-card-text style="color: white">
-        <ul style="text-align: left">
-          <li>Running</li>
-          <li>Biking</li>
-          <li>Swimming</li>
-          <li>Gaming</li>
-          <li>Word Search Puzzles</li>
-          <li>Solving Problems</li>
-        </ul>
-      </v-card-text>
+    <v-card id="interestsCard" shaped style="text-align: left">
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="item">Running</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="item">Biking</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="item">Swimming</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="item">Gaming</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="item"
+            >Word Search Puzzles</v-list-item-title
+          >
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="item">Solving Problems</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-card>
   </div>
 </template>
@@ -33,6 +55,9 @@ export default {
   background-color: #41474d;
   margin-right: auto !important;
   margin-left: auto !important;
+}
+.item {
+  color: white;
 }
 @media (max-width: 1000px) {
   #interestsCard {
