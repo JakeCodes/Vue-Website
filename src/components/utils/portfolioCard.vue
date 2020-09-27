@@ -1,5 +1,6 @@
 <template>
   <v-card
+    :elevation="hover ? 15 : 2"
     class="mx-auto"
     max-width="600"
     id="card"
