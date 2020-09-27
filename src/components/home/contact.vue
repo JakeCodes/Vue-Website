@@ -47,7 +47,7 @@
         >submit</v-btn
       >
     </form>
-    <v-snackbar v-model="snackbar" :vertical="vertical">
+    <v-snackbar :color="snackColor" v-model="snackbar">
       <span v-if="status === 'INVALID'">Invalid Form</span>
       <span v-if="status === 'SUCCESS'">Success</span>
       <span v-if="status === 'EMAIL'">Error Sending Email</span>
@@ -85,6 +85,7 @@ export default {
     status: "",
     loading: false,
     snackbar: false,
+    snackColor: "",
   }),
 
   computed: {
@@ -119,12 +120,13 @@ export default {
     async onSubmit(e) {
       e.preventDefault();
       this.loading = true;
-      if (this.$v.$invalid)
-        return (
-          (this.status = "INVALID"),
-          (this.snackbar = true),
-          (this.loading = false)
-        );
+      if (this.$v.$invalid) {
+        this.snackColor = "error";
+        this.status = "INVALID";
+        this.snackbar = true;
+        this.loading = false;
+        return;
+      }
       const url = `https://jakecodes-backend.herokuapp.com/
       ?name=${this.name.split("&").join("and")}
       &email=${this.email.split("&").join("and")}
@@ -146,6 +148,7 @@ export default {
           );
         });
       await this.clear();
+      this.snackColor = "success";
       this.status = "SUCCESS";
       this.loading = false;
       this.snackbar = true;
