@@ -24,6 +24,11 @@
               <v-list-item-title>Skills</v-list-item-title>
             </v-list-item>
           </a>
+          <a href="#faq" v-smooth-scroll @click="drawer = false">
+            <v-list-item>
+              <v-list-item-title>FAQ</v-list-item-title>
+            </v-list-item>
+          </a>
           <a href="#contact" v-smooth-scroll @click="drawer = false">
             <v-list-item>
               <v-list-item-title>Contact Me</v-list-item-title>

@@ -165,10 +165,10 @@ export default {
 
 <style scoped>
 #contact {
-  width: 100vw !important;
+  min-width: 100vw !important;
 }
 #contactForm {
-  width: 50vw !important;
+  min-width: 50% !important;
 }
 #submitBtn {
   background-color: #b95b37 !important;

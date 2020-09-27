@@ -9,6 +9,9 @@
     <a href="#skills" v-smooth-scroll class="nav-link">
       <v-btn text class="nav-item">Skills</v-btn>
     </a>
+    <a href="#faq" v-smooth-scroll class="nav-link">
+      <v-btn text class="nav-item">FAQ</v-btn>
+    </a>
     <a href="#contact" v-smooth-scroll class="nav-link">
       <v-btn text class="nav-item">Contact Me</v-btn>
     </a>

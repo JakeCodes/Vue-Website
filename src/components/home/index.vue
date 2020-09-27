@@ -5,6 +5,7 @@
       <About />
       <Portfolio />
       <Skills />
+      <FAQ />
       <Contact />
     </div>
   </div>
@@ -14,12 +15,13 @@
 import About from "./about";
 import Portfolio from "./portfolio";
 import Skills from "./skills";
+import FAQ from "./faq";
 import Contact from "./contact";
 import ResponsiveNav from "../navigation/topnav/responsive.nav";
 
 export default {
   name: "Home",
-  components: { About, Portfolio, Skills, Contact, ResponsiveNav },
+  components: { About, Portfolio, Skills, Contact, ResponsiveNav, FAQ },
 };
 </script>
 
