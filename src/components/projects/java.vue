@@ -1,5 +1,5 @@
 <template>
-  <div id="Java" style="min-height: 100vh; padding-top: 80px">
+  <div id="Java" style="min-height: auto; padding-top: 80px">
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -9,7 +9,7 @@
           v-on="on"
         >
           <router-link to="/">
-            <v-icon size="40px" id="icon" style="color: #B95B37"
+            <v-icon size="40px" id="icon" style="color: #b95b37"
               >mdi-close</v-icon
             >
           </router-link>
