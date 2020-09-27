@@ -1,7 +1,11 @@
 <template>
   <div id="nav" class="center">
     <a href="#about" v-smooth-scroll class="nav-link">
-      <v-btn text id="nav-title" class="nav-item">JakeCodes</v-btn>
+      <img
+        src="../../../assets/imgs/JakeLogo.png"
+        alt="jakecodes_img"
+        style="width: 80px"
+      />
     </a>
     <a href="#portfolio" v-smooth-scroll class="nav-link">
       <v-btn text class="nav-item">Portfolio</v-btn>
@@ -31,9 +35,6 @@ export default {
   background-color: #b95b37;
   height: 70px;
   z-index: 1000;
-}
-#nav-title {
-  font-size: 25px;
 }
 .nav-link {
   margin-right: 30px;
