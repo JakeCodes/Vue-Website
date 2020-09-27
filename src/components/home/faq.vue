@@ -17,7 +17,7 @@
       <v-expansion-panel>
         <v-expansion-panel-header>My Goals?</v-expansion-panel-header>
         <v-expansion-panel-content>
-          I want to become a Software Engineer when I grow up
+          To become a Software Engineer when I grow up
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
