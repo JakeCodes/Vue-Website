@@ -1,5 +1,13 @@
 <template functional>
-  <div id="skills" style="min-height: auto; padding-top: 100px">
+  <div
+    id="skills"
+    style="
+      min-height: auto;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-color: #d1d1d1;
+    "
+  >
     <h1>Skills</h1>
 
     <p id="par">Python</p>

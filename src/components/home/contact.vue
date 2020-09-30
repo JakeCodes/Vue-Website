@@ -6,6 +6,7 @@
       padding: 100px;
       justify-content: center;
       display: flex;
+      background-color: #d1d1d1;
     "
   >
     <form id="contactForm" v-on:submit="onSubmit">

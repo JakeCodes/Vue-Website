@@ -1,6 +1,14 @@
 <template>
-  <div id="portfolio" style="min-height: auto; padding-top: 100px">
-    <h1>Portfolio</h1>
+  <div
+    id="portfolio"
+    style="
+      min-height: auto;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-color: #a66046;
+    "
+  >
+    <h1 style="color: white">Portfolio</h1>
 
     <PortfolioCard
       title="Javascript"

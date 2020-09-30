@@ -1,9 +1,14 @@
 <template>
-  <div id="footer">
+  <div id="footer" style="color: white">
     <v-footer dark padless>
       <v-card flat tile class="white--text text-center" id="footerCard">
         <v-card-text id="footerTop" class="center">
-          <a v-for="icon in icons" :key="icon" :href="icon.link" target="_blank">
+          <a
+            v-for="icon in icons"
+            :key="icon"
+            :href="icon.link"
+            target="_blank"
+          >
             <v-btn class="mx-4 white--text" icon>
               <v-icon size="40px" id="icon">{{ icon.icon }}</v-icon>
             </v-btn>
@@ -48,9 +53,6 @@ export default {
 </script>
 
 <style scoped>
-#footer {
-  margin-top: 80px;
-}
 #footerCard {
   width: 100vw;
   background-color: #41474d !important;
