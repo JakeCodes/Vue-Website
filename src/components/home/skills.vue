@@ -1,12 +1,7 @@
 <template functional>
   <div
     id="skills"
-    style="
-      min-height: auto;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      background-color: #d1d1d1;
-    "
+    style="min-height: auto; padding-top: 100px; padding-bottom: 100px"
   >
     <h1>Skills</h1>
 

@@ -1,11 +1,6 @@
 <template>
   <div id="sidebar">
-    <v-app-bar
-      color="#B95B37"
-      dark
-      fixed
-      style="height: 70px; display: flex; align-items: center"
-    >
+    <v-app-bar color="#B95B37" dark fixed>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title>JakeCodes</v-toolbar-title>

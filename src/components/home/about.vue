@@ -1,7 +1,7 @@
 <template functional>
   <div
     id="about"
-    style="min-height: 100vh; padding-top: 100px; background-color: #d1d1d1"
+    style="min-height: 100vh; padding-top: 100px; margin-bottom: 50px"
     data-aos="fade"
   >
     <h1>Hi I'm Jake</h1>
