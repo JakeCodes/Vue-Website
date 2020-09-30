@@ -1,5 +1,8 @@
 <template>
-  <div id="Java" style="min-height: auto; padding-top: 80px">
+  <div
+    id="Java"
+    style="min-height: auto; padding-top: 80px; margin-bottom: 40px"
+  >
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn
