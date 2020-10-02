@@ -1,19 +1,26 @@
 <template>
   <div id="nav" class="center">
     <a href="#about" v-smooth-scroll class="nav-link">
-      <v-btn text id="nav-title" class="nav-item">JakeCodes</v-btn>
+      <div id="nav-title" class="nav-item">
+        <img
+          src="../../../assets/imgs/Jake.jpg"
+          alt="JakeLogo"
+          width="120px"
+          style="margin-top: 60px"
+        />
+      </div>
     </a>
     <a href="#portfolio" v-smooth-scroll class="nav-link">
-      <v-btn text class="nav-item">Portfolio</v-btn>
+      <v-btn text rounded class="nav-item">Portfolio</v-btn>
     </a>
     <a href="#skills" v-smooth-scroll class="nav-link">
-      <v-btn text class="nav-item">Skills</v-btn>
+      <v-btn text rounded class="nav-item">Skills</v-btn>
     </a>
     <a href="#interests" v-smooth-scroll class="nav-link">
-      <v-btn text class="nav-item">Interests</v-btn>
+      <v-btn text rounded class="nav-item">Interests</v-btn>
     </a>
     <a href="#contact" v-smooth-scroll class="nav-link">
-      <v-btn text class="nav-item">Contact Me</v-btn>
+      <v-btn text rounded class="nav-item">Contact Me</v-btn>
     </a>
   </div>
 </template>
@@ -36,13 +43,15 @@ export default {
   font-size: 25px;
 }
 .nav-link {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 .nav-item {
   color: white !important;
   text-decoration: none;
+  transition: color 0.2s;
 }
 .nav-item:hover {
-  color: #41474d !important;
+  background-color: none !important;
+  color: #dbcccc !important;
 }
 </style>

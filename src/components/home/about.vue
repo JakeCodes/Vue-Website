@@ -37,10 +37,16 @@ export default {
   padding: 80px;
   margin-top: 80px;
 }
+@media (max-width: 1500px) {
+  #description {
+    width: 80%;
+  }
+}
 @media (max-width: 1000px) {
   #description {
     width: 100%;
-    padding: 30px;
+    padding: 10px;
+    font-size: 20px;
   }
 }
 </style>
