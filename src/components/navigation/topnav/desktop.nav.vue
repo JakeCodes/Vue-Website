@@ -5,8 +5,8 @@
         <img
           src="../../../assets/imgs/Jake.jpg"
           alt="JakeLogo"
-          width="120px"
-          style="margin-top: 60px"
+          width="100px"
+          style="margin-top: 40px"
         />
       </div>
     </a>
