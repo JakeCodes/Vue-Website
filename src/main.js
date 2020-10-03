@@ -12,8 +12,6 @@ Vue.use(VueSmoothScroll, {
   updateHistory: false,
 });
 
-Vue.config.productionTip = false;
-
 new Vue({
   created() {
     aos.init({ duration: 800, once: true });
