@@ -5,8 +5,8 @@
         <img
           src="../../../assets/imgs/Jake.jpg"
           alt="JakeLogo"
-          width="100px"
-          style="margin-top: 40px"
+          id="img"
+          class="center"
         />
       </div>
     </a>
@@ -38,6 +38,10 @@ export default {
   background-color: #b95b37;
   height: 70px;
   z-index: 1000;
+}
+#img {
+  border-radius: 50%;
+  width: 60px;
 }
 #nav-title {
   font-size: 25px;
