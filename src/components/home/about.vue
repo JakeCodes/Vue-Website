@@ -30,11 +30,10 @@ export default {
 #description {
   width: 50%;
   margin: auto;
-  border: #b95b37 30px dashed;
   background-color: #41474d;
   color: white;
   font-size: 25px;
-  padding: 80px;
+  padding: 40px 80px 40px 80px;
   margin-top: 80px;
 }
 @media (max-width: 1500px) {
