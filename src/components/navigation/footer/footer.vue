@@ -9,7 +9,7 @@
             :href="icon.link"
             target="_blank"
           >
-            <v-btn class="mx-4 white--text" icon>
+            <v-btn class="mx-4" icon>
               <v-icon size="40px" id="icon">{{ icon.icon }}</v-icon>
             </v-btn>
           </a>

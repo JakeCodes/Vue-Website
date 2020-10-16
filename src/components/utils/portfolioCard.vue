@@ -15,22 +15,21 @@
     </v-card-text>
 
     <v-card-actions>
-      <router-link :to="link">
-        <v-btn text id="projectBtn" v-bind="attrs" v-on="on"
-          >See Projects</v-btn
-        >
-      </router-link>
+      <Dialog :title="title" :type="type" />
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
+import Dialog from "../home/dialog";
+
 export default {
   name: "portfolioCard",
+  components: { Dialog },
   props: {
     description: String,
-    link: String,
     title: String,
+    type: String,
     img: String,
     animation: String,
   },
