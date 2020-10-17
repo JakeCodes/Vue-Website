@@ -3,16 +3,21 @@
     <v-footer dark padless>
       <v-card flat tile class="white--text text-center" id="footerCard">
         <v-card-text id="footerTop" class="center">
-          <a
-            v-for="icon in icons"
-            :key="icon"
+          <div v-for="icon in icons" :key="icon">
+          <v-tooltip top>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn class="mx-4" icon v-bind="attrs" v-on="on">
+             <a
             :href="icon.link"
             target="_blank"
           >
-            <v-btn class="mx-4" icon>
               <v-icon size="40px" id="icon">{{ icon.icon }}</v-icon>
+                                </a>
             </v-btn>
-          </a>
+        </template>
+        <span>{{ icon.name }}</span>
+      </v-tooltip>
+          </div>
         </v-card-text>
 
         <v-divider></v-divider>
@@ -32,18 +37,22 @@ export default {
   data: () => ({
     icons: [
       {
+        name: "Discord",
         icon: "mdi-discord",
         link: "https://discord.jakecodes.com",
       },
       {
+        name: "Github",
         icon: "mdi-github",
         link: "https://github.jakecodes.com",
       },
       {
+        name: "Stack-Overflow",
         icon: "mdi-stack-overflow",
         link: "https://stackoverflow.jakecodes.com",
       },
       {
+        name: "Youtube",
         icon: "mdi-youtube",
         link: "https://youtube.jakecodes.com",
       },
