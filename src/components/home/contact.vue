@@ -13,6 +13,7 @@
       <div data-aos="fade-left">
         <v-text-field
           v-model="name"
+          :disabled="disabled"
           :error-messages="nameErrors"
           :counter="20"
           label="Name"
@@ -24,6 +25,7 @@
       <div data-aos="fade-right">
         <v-text-field
           v-model="email"
+          :disabled="disabled"
           :error-messages="emailErrors"
           label="E-mail"
           type="email"
@@ -35,6 +37,7 @@
       <div data-aos="fade-left">
         <v-textarea
           v-model="msg"
+          :disabled="disabled"
           :error-messages="msgErrors"
           label="Message"
           solo
@@ -86,6 +89,7 @@ export default {
     loading: false,
     snackbar: false,
     snackColor: "",
+    disabled: false,
   }),
 
   computed: {
@@ -120,11 +124,13 @@ export default {
     async onSubmit(e) {
       e.preventDefault();
       this.loading = true;
+      this.disabled = true
       if (this.$v.$invalid) {
         this.snackColor = "error";
         this.status = "INVALID";
         this.snackbar = true;
         this.loading = false;
+        this.disabled = false
         return;
       }
       const url = `https://jakecodes-backend.herokuapp.com/
@@ -152,6 +158,7 @@ export default {
       this.status = "SUCCESS";
       this.loading = false;
       this.snackbar = true;
+      this.disabled = false
     },
     clear() {
       this.$v.$reset();

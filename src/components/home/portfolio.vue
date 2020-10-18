@@ -47,5 +47,3 @@ export default {
   components: { PortfolioCard },
 };
 </script>
-
-<style scoped></style>
